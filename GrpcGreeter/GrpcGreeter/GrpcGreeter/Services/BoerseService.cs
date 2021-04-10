@@ -15,7 +15,7 @@ namespace GrpcGreeter.Services
             _logger = logger;
         }
 
-        public override Task<TradeInfo> GetTradeNr(TradeSuchenMitNr request, ServerCallContext context)
+        public override Task<TradeInfo> GetTradeInfo(TradeSuchenMitNr request, ServerCallContext context)
         {
             TradeInfo output = new TradeInfo();
             if (request.Id == "1")

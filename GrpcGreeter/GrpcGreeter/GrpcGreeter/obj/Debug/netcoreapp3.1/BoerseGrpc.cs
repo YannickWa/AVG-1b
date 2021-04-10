@@ -15,10 +15,10 @@ namespace GrpcGreeter {
     static readonly grpc::Marshaller<global::GrpcGreeter.TradeSuchenMitNr> __Marshaller_TradeSuchenMitNr = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcGreeter.TradeSuchenMitNr.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcGreeter.TradeInfo> __Marshaller_TradeInfo = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcGreeter.TradeInfo.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo> __Method_GetTradeNr = new grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(
+    static readonly grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo> __Method_GetTradeInfo = new grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetTradeNr",
+        "GetTradeInfo",
         __Marshaller_TradeSuchenMitNr,
         __Marshaller_TradeInfo);
 
@@ -32,7 +32,7 @@ namespace GrpcGreeter {
     [grpc::BindServiceMethod(typeof(Boerse), "BindService")]
     public abstract partial class BoerseBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::GrpcGreeter.TradeInfo> GetTradeNr(global::GrpcGreeter.TradeSuchenMitNr request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcGreeter.TradeInfo> GetTradeInfo(global::GrpcGreeter.TradeSuchenMitNr request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -44,7 +44,7 @@ namespace GrpcGreeter {
     public static grpc::ServerServiceDefinition BindService(BoerseBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetTradeNr, serviceImpl.GetTradeNr).Build();
+          .AddMethod(__Method_GetTradeInfo, serviceImpl.GetTradeInfo).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -53,7 +53,7 @@ namespace GrpcGreeter {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BoerseBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetTradeNr, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(serviceImpl.GetTradeNr));
+      serviceBinder.AddMethod(__Method_GetTradeInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(serviceImpl.GetTradeInfo));
     }
 
   }

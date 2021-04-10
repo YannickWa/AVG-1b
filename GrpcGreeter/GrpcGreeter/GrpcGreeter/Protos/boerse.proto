@@ -3,7 +3,7 @@ syntax = "proto3";
 option csharp_namespace = "GrpcGreeter";
 
 service Boerse {
-	rpc GetTradeNr (TradeSuchenMitNr) returns (TradeInfo);
+	rpc GetTradeInfo (TradeSuchenMitNr) returns (TradeInfo);
 }
 
 message TradeSuchenMitNr {

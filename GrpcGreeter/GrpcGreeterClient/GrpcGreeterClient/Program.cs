@@ -16,7 +16,7 @@ namespace GrpcGreeterClient
 
             var tradeRequested = new TradeSuchenMitNr { Id = "1" };
 
-            var trade = await boerseClient.GetTradeNrAsync(tradeRequested);
+            var trade = await boerseClient.GetTradeInfoAsync(tradeRequested);
 
             Console.WriteLine($" ID : {trade.Id} \n Name : {trade.Name} \n Anzahl : {trade.Menge} \n Datum : {trade.Datum}");
 
