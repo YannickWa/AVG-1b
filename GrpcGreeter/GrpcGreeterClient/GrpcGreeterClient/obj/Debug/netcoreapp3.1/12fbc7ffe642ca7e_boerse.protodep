@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp3.1\Protos/Boerse.cs \
+obj\Debug\netcoreapp3.1\Protos/BoerseGrpc.cs: Protos/boerse.proto

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGreeter";
+
+service Boerse {
+	rpc GetTradeNr (TradeSuchenMitNr) returns (TradeInfo);
+}
+
+message TradeSuchenMitNr {
+	string id = 1;
+}
+
+message TradeInfo {
+	string id = 1;
+	string name = 2;
+	int32 menge = 3;
+	string datum = 4;
+}
