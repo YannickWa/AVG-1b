@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj": {}
+    "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj": {
+    "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
+        "projectUniqueName": "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
         "projectName": "GrpcGreeter",
-        "projectPath": "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
+        "projectPath": "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
         "packagesPath": "C:\\Users\\yanni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\obj\\",
+        "outputPath": "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yanni\\AppData\\Roaming\\NuGet\\NuGet.Config",

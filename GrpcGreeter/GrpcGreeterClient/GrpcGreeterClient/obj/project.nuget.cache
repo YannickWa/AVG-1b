@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vSEhLJkj6H4hck/FvBV3WoWSlXHVr25VsGPTlHkExABGeKFvLe8YiLqw4V3xvvxbDhq/QnTg+hJn8JFBHGRR2w==",
+  "dgSpecHash": "tMTyyNZ84g7lclo9uofZe1x1t56Vx52MxhHMWCJB4L5Q8ycE3R8rZ/0o47MtFTJX3JkuZNNIHZ6TyYq91virkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yanni\\Desktop\\AVG\\Abgabe\\GrpcGreeter\\GrpcGreeterClient\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+  "projectFilePath": "C:\\Users\\yanni\\Source\\Repos\\AVG-1b\\GrpcGreeter\\GrpcGreeterClient\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yanni\\.nuget\\packages\\google.protobuf\\3.15.8\\google.protobuf.3.15.8.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\grpc.aspnetcore\\2.27.0\\grpc.aspnetcore.2.27.0.nupkg.sha512",

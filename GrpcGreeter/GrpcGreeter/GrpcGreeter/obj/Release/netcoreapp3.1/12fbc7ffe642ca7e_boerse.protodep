@@ -1,0 +1,2 @@
+obj\Release\netcoreapp3.1/Boerse.cs \
+obj\Release\netcoreapp3.1/BoerseGrpc.cs: Protos/boerse.proto
