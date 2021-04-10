@@ -45,22 +45,20 @@ namespace GrpcGreeter.Services
             return await Task.FromResult(output);
         }
 
-        public override async Task GetPossibleTrades(Time request, IServerStreamWriter<TradeInfo> responseStream, ServerCallContext context)
+        public override async Task GetNextTrades(Time request, IServerStreamWriter<TradeInfo> responseStream, ServerCallContext context)
         {
             var rng = new Random();
-            var now = DateTime.Now;
-
-            var end = DateTime.Now.AddMinutes(Convert.ToInt32(request));
+            var end = DateTime.Now.AddMinutes(request.Min);
             
             while (DateTime.Now < end)
             {
-                await Task.Delay(10000);
+                await Task.Delay(5000);
 
                 var output = new TradeInfo
                 {
                     Id = 4,
-                    Name = "ABC",
-                    Menge = 5,
+                    Name = "ABC-Stream Test",
+                    Menge = rng.Next(1001),
                     Datum = DateTime.Now.ToString()
                 };
 

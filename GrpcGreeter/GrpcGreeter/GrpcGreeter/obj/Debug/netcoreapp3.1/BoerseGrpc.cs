@@ -23,10 +23,10 @@ namespace GrpcGreeter {
         __Marshaller_TradeSuchenMitNr,
         __Marshaller_TradeInfo);
 
-    static readonly grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo> __Method_GetPossibleTrades = new grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(
+    static readonly grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo> __Method_GetNextTrades = new grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
-        "GetPossibleTrades",
+        "GetNextTrades",
         __Marshaller_Time,
         __Marshaller_TradeInfo);
 
@@ -45,7 +45,7 @@ namespace GrpcGreeter {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetPossibleTrades(global::GrpcGreeter.Time request, grpc::IServerStreamWriter<global::GrpcGreeter.TradeInfo> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetNextTrades(global::GrpcGreeter.Time request, grpc::IServerStreamWriter<global::GrpcGreeter.TradeInfo> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -58,7 +58,7 @@ namespace GrpcGreeter {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetTradeInfo, serviceImpl.GetTradeInfo)
-          .AddMethod(__Method_GetPossibleTrades, serviceImpl.GetPossibleTrades).Build();
+          .AddMethod(__Method_GetNextTrades, serviceImpl.GetNextTrades).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -68,7 +68,7 @@ namespace GrpcGreeter {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BoerseBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetTradeInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(serviceImpl.GetTradeInfo));
-      serviceBinder.AddMethod(__Method_GetPossibleTrades, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(serviceImpl.GetPossibleTrades));
+      serviceBinder.AddMethod(__Method_GetNextTrades, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(serviceImpl.GetNextTrades));
     }
 
   }

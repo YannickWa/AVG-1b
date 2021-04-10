@@ -53,10 +53,10 @@ namespace GrpcGreeter {
         __Marshaller_TradeSuchenMitNr,
         __Marshaller_TradeInfo);
 
-    static readonly grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo> __Method_GetPossibleTrades = new grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(
+    static readonly grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo> __Method_GetNextTrades = new grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
-        "GetPossibleTrades",
+        "GetNextTrades",
         __Marshaller_Time,
         __Marshaller_TradeInfo);
 
@@ -105,13 +105,13 @@ namespace GrpcGreeter {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTradeInfo, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetPossibleTrades(global::GrpcGreeter.Time request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetNextTrades(global::GrpcGreeter.Time request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetPossibleTrades(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetNextTrades(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetPossibleTrades(global::GrpcGreeter.Time request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetNextTrades(global::GrpcGreeter.Time request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncServerStreamingCall(__Method_GetPossibleTrades, null, options, request);
+        return CallInvoker.AsyncServerStreamingCall(__Method_GetNextTrades, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override BoerseClient NewInstance(ClientBaseConfiguration configuration)
