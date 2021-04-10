@@ -15,7 +15,7 @@ namespace GrpcGreeter.Services
             _logger = logger;
         }
 
-        public override Task<TradeInfo> GetTradeInfo(TradeSuchenMitNr request, ServerCallContext context)
+        public override async Task<TradeInfo> GetTradeInfo(TradeSuchenMitNr request, ServerCallContext context)
         {
             TradeInfo output = new TradeInfo();
             if (request.Id == "1")
@@ -40,7 +40,34 @@ namespace GrpcGreeter.Services
                 output.Datum = "2021, 01, 01, 08, 01, 00";
             }
 
-            return Task.FromResult(output);
+            _logger.LogInformation("Send unary Trade");
+
+            return await Task.FromResult(output);
+        }
+
+        public override async Task GetPossibleTrades(Time request, IServerStreamWriter<TradeInfo> responseStream, ServerCallContext context)
+        {
+            var rng = new Random();
+            var now = DateTime.Now;
+
+            var end = DateTime.Now.AddMinutes(Convert.ToInt32(request));
+            
+            while (DateTime.Now < end)
+            {
+                await Task.Delay(10000);
+
+                var output = new TradeInfo
+                {
+                    Id = "4",
+                    Name = "ABC",
+                    Menge = 5,
+                    Datum = DateTime.Now.ToString()
+                };
+
+                _logger.LogInformation("Send Trade");
+
+                await responseStream.WriteAsync(output);
+            }           
         }
     }
 }

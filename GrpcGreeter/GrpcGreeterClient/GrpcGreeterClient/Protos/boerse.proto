@@ -4,6 +4,7 @@ option csharp_namespace = "GrpcGreeter";
 
 service Boerse {
 	rpc GetTradeInfo (TradeSuchenMitNr) returns (TradeInfo);
+	rpc GetPossibleTrades (Time) returns (stream TradeInfo);
 }
 
 message TradeSuchenMitNr {
@@ -15,4 +16,8 @@ message TradeInfo {
 	string name = 2;
 	int32 menge = 3;
 	string datum = 4;
+}
+
+message Time {
+	string min = 1;
 }
