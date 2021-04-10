@@ -53,3 +53,4 @@ C:\Users\yanni\Source\Repos\AVG-1b\GrpcGreeter\GrpcGreeter\GrpcGreeter\obj\Debug
 C:\Users\yanni\Source\Repos\AVG-1b\GrpcGreeter\GrpcGreeter\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.dll
 C:\Users\yanni\Source\Repos\AVG-1b\GrpcGreeter\GrpcGreeter\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.pdb
 C:\Users\yanni\Source\Repos\AVG-1b\GrpcGreeter\GrpcGreeter\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.genruntimeconfig.cache
+C:\Users\yanni\Source\Repos\AVG-1b\GrpcGreeter\GrpcGreeter\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.csprojAssemblyReference.cache

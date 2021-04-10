@@ -14,7 +14,7 @@ namespace GrpcGreeterClient
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var boerseClient = new Boerse.BoerseClient(channel);
 
-            var tradeRequested = new TradeSuchenMitNr { Id = "1" };
+            var tradeRequested = new TradeSuchenMitNr { Id = "2" };
 
             var trade = await boerseClient.GetTradeInfoAsync(tradeRequested);
 

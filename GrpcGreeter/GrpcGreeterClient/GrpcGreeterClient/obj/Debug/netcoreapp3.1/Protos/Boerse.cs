@@ -26,9 +26,9 @@ namespace GrpcGreeter {
           string.Concat(
             "ChNQcm90b3MvYm9lcnNlLnByb3RvIh4KEFRyYWRlU3VjaGVuTWl0TnISCgoC",
             "aWQYASABKAkiQwoJVHJhZGVJbmZvEgoKAmlkGAEgASgJEgwKBG5hbWUYAiAB",
-            "KAkSDQoFbWVuZ2UYAyABKAUSDQoFZGF0dW0YBCABKAkyNQoGQm9lcnNlEisK",
-            "CkdldFRyYWRlTnISES5UcmFkZVN1Y2hlbk1pdE5yGgouVHJhZGVJbmZvQg6q",
-            "AgtHcnBjR3JlZXRlcmIGcHJvdG8z"));
+            "KAkSDQoFbWVuZ2UYAyABKAUSDQoFZGF0dW0YBCABKAkyNwoGQm9lcnNlEi0K",
+            "DEdldFRyYWRlSW5mbxIRLlRyYWRlU3VjaGVuTWl0TnIaCi5UcmFkZUluZm9C",
+            "DqoCC0dycGNHcmVldGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
