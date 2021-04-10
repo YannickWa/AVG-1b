@@ -25,9 +25,9 @@ namespace GrpcGreeter {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNQcm90b3MvYm9lcnNlLnByb3RvIh4KEFRyYWRlU3VjaGVuTWl0TnISCgoC",
-            "aWQYASABKAkiQwoJVHJhZGVJbmZvEgoKAmlkGAEgASgJEgwKBG5hbWUYAiAB",
+            "aWQYASABKAUiQwoJVHJhZGVJbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUYAiAB",
             "KAkSDQoFbWVuZ2UYAyABKAUSDQoFZGF0dW0YBCABKAkiEwoEVGltZRILCgNt",
-            "aW4YASABKAkyYQoGQm9lcnNlEi0KDEdldFRyYWRlSW5mbxIRLlRyYWRlU3Vj",
+            "aW4YASABKAUyYQoGQm9lcnNlEi0KDEdldFRyYWRlSW5mbxIRLlRyYWRlU3Vj",
             "aGVuTWl0TnIaCi5UcmFkZUluZm8SKAoRR2V0UG9zc2libGVUcmFkZXMSBS5U",
             "aW1lGgouVHJhZGVJbmZvMAFCDqoCC0dycGNHcmVldGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -82,12 +82,12 @@ namespace GrpcGreeter {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private string id_ = "";
+    private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
+    public int Id {
       get { return id_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
@@ -111,7 +111,7 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -128,9 +128,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -141,9 +141,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -154,8 +154,8 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -168,7 +168,7 @@ namespace GrpcGreeter {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
+      if (other.Id != 0) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -185,8 +185,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
         }
@@ -203,8 +203,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
         }
@@ -257,12 +257,12 @@ namespace GrpcGreeter {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private string id_ = "";
+    private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
+    public int Id {
       get { return id_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
@@ -322,7 +322,7 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Menge != 0) hash ^= Menge.GetHashCode();
       if (Datum.Length != 0) hash ^= Datum.GetHashCode();
@@ -342,9 +342,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(18);
@@ -367,9 +367,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(18);
@@ -392,8 +392,8 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -415,7 +415,7 @@ namespace GrpcGreeter {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
+      if (other.Id != 0) {
         Id = other.Id;
       }
       if (other.Name.Length != 0) {
@@ -441,8 +441,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
           case 18: {
@@ -471,8 +471,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
           case 18: {
@@ -534,12 +534,12 @@ namespace GrpcGreeter {
 
     /// <summary>Field number for the "min" field.</summary>
     public const int MinFieldNumber = 1;
-    private string min_ = "";
+    private int min_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Min {
+    public int Min {
       get { return min_; }
       set {
-        min_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        min_ = value;
       }
     }
 
@@ -563,7 +563,7 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Min.Length != 0) hash ^= Min.GetHashCode();
+      if (Min != 0) hash ^= Min.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -580,9 +580,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Min.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Min);
+      if (Min != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Min);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -593,9 +593,9 @@ namespace GrpcGreeter {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Min.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Min);
+      if (Min != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Min);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -606,8 +606,8 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Min.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Min);
+      if (Min != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Min);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -620,7 +620,7 @@ namespace GrpcGreeter {
       if (other == null) {
         return;
       }
-      if (other.Min.Length != 0) {
+      if (other.Min != 0) {
         Min = other.Min;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -637,8 +637,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Min = input.ReadString();
+          case 8: {
+            Min = input.ReadInt32();
             break;
           }
         }
@@ -655,8 +655,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Min = input.ReadString();
+          case 8: {
+            Min = input.ReadInt32();
             break;
           }
         }
