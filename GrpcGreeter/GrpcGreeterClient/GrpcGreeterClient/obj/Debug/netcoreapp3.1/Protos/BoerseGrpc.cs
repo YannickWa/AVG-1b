@@ -44,12 +44,20 @@ namespace GrpcGreeter {
 
     static readonly grpc::Marshaller<global::GrpcGreeter.TradeSuchenMitNr> __Marshaller_TradeSuchenMitNr = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcGreeter.TradeSuchenMitNr.Parser));
     static readonly grpc::Marshaller<global::GrpcGreeter.TradeInfo> __Marshaller_TradeInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcGreeter.TradeInfo.Parser));
+    static readonly grpc::Marshaller<global::GrpcGreeter.Time> __Marshaller_Time = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcGreeter.Time.Parser));
 
-    static readonly grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo> __Method_GetTradeNr = new grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(
+    static readonly grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo> __Method_GetTradeInfo = new grpc::Method<global::GrpcGreeter.TradeSuchenMitNr, global::GrpcGreeter.TradeInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetTradeNr",
+        "GetTradeInfo",
         __Marshaller_TradeSuchenMitNr,
+        __Marshaller_TradeInfo);
+
+    static readonly grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo> __Method_GetNextTrades = new grpc::Method<global::GrpcGreeter.Time, global::GrpcGreeter.TradeInfo>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetNextTrades",
+        __Marshaller_Time,
         __Marshaller_TradeInfo);
 
     /// <summary>Service descriptor</summary>
@@ -81,21 +89,29 @@ namespace GrpcGreeter {
       {
       }
 
-      public virtual global::GrpcGreeter.TradeInfo GetTradeNr(global::GrpcGreeter.TradeSuchenMitNr request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcGreeter.TradeInfo GetTradeInfo(global::GrpcGreeter.TradeSuchenMitNr request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetTradeNr(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetTradeInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::GrpcGreeter.TradeInfo GetTradeNr(global::GrpcGreeter.TradeSuchenMitNr request, grpc::CallOptions options)
+      public virtual global::GrpcGreeter.TradeInfo GetTradeInfo(global::GrpcGreeter.TradeSuchenMitNr request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetTradeNr, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetTradeInfo, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::GrpcGreeter.TradeInfo> GetTradeNrAsync(global::GrpcGreeter.TradeSuchenMitNr request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcGreeter.TradeInfo> GetTradeInfoAsync(global::GrpcGreeter.TradeSuchenMitNr request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetTradeNrAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetTradeInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::GrpcGreeter.TradeInfo> GetTradeNrAsync(global::GrpcGreeter.TradeSuchenMitNr request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcGreeter.TradeInfo> GetTradeInfoAsync(global::GrpcGreeter.TradeSuchenMitNr request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetTradeNr, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetTradeInfo, null, options, request);
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetNextTrades(global::GrpcGreeter.Time request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNextTrades(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::GrpcGreeter.TradeInfo> GetNextTrades(global::GrpcGreeter.Time request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_GetNextTrades, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override BoerseClient NewInstance(ClientBaseConfiguration configuration)

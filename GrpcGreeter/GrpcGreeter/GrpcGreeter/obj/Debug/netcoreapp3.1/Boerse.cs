@@ -25,15 +25,17 @@ namespace GrpcGreeter {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNQcm90b3MvYm9lcnNlLnByb3RvIh4KEFRyYWRlU3VjaGVuTWl0TnISCgoC",
-            "aWQYASABKAkiQwoJVHJhZGVJbmZvEgoKAmlkGAEgASgJEgwKBG5hbWUYAiAB",
-            "KAkSDQoFbWVuZ2UYAyABKAUSDQoFZGF0dW0YBCABKAkyNQoGQm9lcnNlEisK",
-            "CkdldFRyYWRlTnISES5UcmFkZVN1Y2hlbk1pdE5yGgouVHJhZGVJbmZvQg6q",
-            "AgtHcnBjR3JlZXRlcmIGcHJvdG8z"));
+            "aWQYASABKAUiQwoJVHJhZGVJbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUYAiAB",
+            "KAkSDQoFbWVuZ2UYAyABKAUSDQoFZGF0dW0YBCABKAkiEwoEVGltZRILCgNt",
+            "aW4YASABKAUyXQoGQm9lcnNlEi0KDEdldFRyYWRlSW5mbxIRLlRyYWRlU3Vj",
+            "aGVuTWl0TnIaCi5UcmFkZUluZm8SJAoNR2V0TmV4dFRyYWRlcxIFLlRpbWUa",
+            "Ci5UcmFkZUluZm8wAUIOqgILR3JwY0dyZWV0ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcGreeter.TradeSuchenMitNr), global::GrpcGreeter.TradeSuchenMitNr.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcGreeter.TradeInfo), global::GrpcGreeter.TradeInfo.Parser, new[]{ "Id", "Name", "Menge", "Datum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcGreeter.TradeInfo), global::GrpcGreeter.TradeInfo.Parser, new[]{ "Id", "Name", "Menge", "Datum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcGreeter.Time), global::GrpcGreeter.Time.Parser, new[]{ "Min" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +78,12 @@ namespace GrpcGreeter {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private string id_ = "";
+    private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
+    public int Id {
       get { return id_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
@@ -105,7 +107,7 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -119,9 +121,9 @@ namespace GrpcGreeter {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -131,8 +133,8 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -145,7 +147,7 @@ namespace GrpcGreeter {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
+      if (other.Id != 0) {
         Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -159,8 +161,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
         }
@@ -208,12 +210,12 @@ namespace GrpcGreeter {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private string id_ = "";
+    private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
+    public int Id {
       get { return id_; }
       set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        id_ = value;
       }
     }
 
@@ -273,7 +275,7 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Menge != 0) hash ^= Menge.GetHashCode();
       if (Datum.Length != 0) hash ^= Datum.GetHashCode();
@@ -290,9 +292,9 @@ namespace GrpcGreeter {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(18);
@@ -314,8 +316,8 @@ namespace GrpcGreeter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -337,7 +339,7 @@ namespace GrpcGreeter {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
+      if (other.Id != 0) {
         Id = other.Id;
       }
       if (other.Name.Length != 0) {
@@ -360,8 +362,8 @@ namespace GrpcGreeter {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Id = input.ReadString();
+          case 8: {
+            Id = input.ReadInt32();
             break;
           }
           case 18: {
@@ -374,6 +376,135 @@ namespace GrpcGreeter {
           }
           case 34: {
             Datum = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Time : pb::IMessage<Time> {
+    private static readonly pb::MessageParser<Time> _parser = new pb::MessageParser<Time>(() => new Time());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Time> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcGreeter.BoerseReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Time() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Time(Time other) : this() {
+      min_ = other.min_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Time Clone() {
+      return new Time(this);
+    }
+
+    /// <summary>Field number for the "min" field.</summary>
+    public const int MinFieldNumber = 1;
+    private int min_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Min {
+      get { return min_; }
+      set {
+        min_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Time);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Time other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Min != other.Min) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Min != 0) hash ^= Min.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Min != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Min);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Min != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Min);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Time other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Min != 0) {
+        Min = other.Min;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Min = input.ReadInt32();
             break;
           }
         }
