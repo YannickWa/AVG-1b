@@ -18,7 +18,7 @@ namespace GrpcGreeter.Services
         public override async Task<TradeInfo> GetTradeInfo(TradeSuchenMitNr request, ServerCallContext context)
         {
             TradeInfo output = new TradeInfo();
-            if (request.Id == 1)
+            if (request.Id == 1) // Beispiel-Daten
             {
                 output.Id = 1;
                 output.Name = "Rast&Ruh";
@@ -40,7 +40,7 @@ namespace GrpcGreeter.Services
                 output.Datum = "2021, 01, 01, 08, 01, 00";
             }
 
-            _logger.LogInformation("Send unary Trade");
+            _logger.LogInformation("Trade sent");
 
             return await Task.FromResult(output);
         }
@@ -52,17 +52,17 @@ namespace GrpcGreeter.Services
             
             while (DateTime.Now < end)
             {
-                await Task.Delay(5000);
+                await Task.Delay(rng.Next(1000,5000));
 
-                var output = new TradeInfo
+                var output = new TradeInfo //Simulierte Trades
                 {
                     Id = 4,
                     Name = "ABC-Stream Test",
-                    Menge = rng.Next(1001),
+                    Menge = rng.Next(0,1001),
                     Datum = DateTime.Now.ToString()
                 };
 
-                _logger.LogInformation("Send Trade");
+                _logger.LogInformation("Next trade sent");
 
                 await responseStream.WriteAsync(output);
             }           

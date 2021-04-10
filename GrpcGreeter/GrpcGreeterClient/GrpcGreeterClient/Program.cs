@@ -10,7 +10,8 @@ namespace GrpcGreeterClient
 {
     class Program
     {
-        static async void unaryId(int id)
+        // Trade-Nr. abfragen
+        static async void unaryId(int id) 
         {
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var boerseClient = new Boerse.BoerseClient(channel);
@@ -28,6 +29,7 @@ namespace GrpcGreeterClient
             }
         }
 
+        // Trades der nächsten x Minuten anfragen
         static async void stream(int duration)
         {
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
@@ -44,10 +46,10 @@ namespace GrpcGreeterClient
 
         static void Main()
         {
-            unaryId(3);
-            unaryId(1);
-            unaryId(4);
-            stream(1);
+            unaryId(3); // Trade-Nr. 3
+            unaryId(1); // Trade-Nr. 1
+            unaryId(4); // Trade-Nr. 4
+            stream(2); // Trades der nächsten 2 Minuten
 
             Console.ReadKey();
         }
